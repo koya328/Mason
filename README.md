@@ -20,8 +20,8 @@ pip install langchain
 ## 使用方法
 
 1. 以下の二つを準備してください。
-    - OpenAIのAPIキー
-    - minecraftアカウント(サーバーにログインさせる場合、Mason用のアカウントが必要になります。ローカルで1人で試す場合は不要です。)
+- OpenAIのAPIキー
+- minecraftアカウント(サーバーにログインさせる場合、Mason用のアカウントが必要になります。ローカルで1人で試す場合は不要です。)
 2. OpenAIのAPIキーをapi_key.txtに記述してください。
 3. main.js内のHOST, PORT等の定数を整え、以下のコマンドでBOTをログインさせてください。
 
