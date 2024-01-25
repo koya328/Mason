@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason</title>
+</head>
+
+<body>
+    <h1 class="header">Mason</h1>
+    <article>
+        <div class="menu">
+            <p class="menu_item"><a href="/">ホーム</a></p>
+            <p class="menu_item"><a href="/use">使い方</a></p>
+            <p class="menu_item"><a href="/attention">注意事項</a></p>
+            <p class="menu_item"><a href="/structure">仕組み</a></p>
+        </div>
+
+        <div class="content">
+            <div class="content-form">
+                <h1>ホーム</h1>
+                <form method="post" action="/login">
+                    <p>サーバーアドレス：<input type="text" name="host" value="xxx.xxx.xxx.xxx"></p>
+                    <p>　　　ポート番号：<input type="text" name="port" value="25565"></p>
+                    <p>　　　バージョン：<input type="text" name="version" value="1.19.4"></p>
+                    <p>　　プレイヤー名：<input type="text" name="player_name" value=""></p>
+                    <p>　　　今日の目標：<input type="text" name="player_goal" value=""></p>
+                    <p><input type="submit" value="ログイン！"></p>
+                </form>
+            </div>
+            <div class="content-text">
+                <h2>Masonとは</h2>
+                <p>説明</p>
+                <h2>入力情報の説明</h2>
+                <p><b>サーバーアドレス</b>：Masonをログインさせたいサーバーのアドレスを入力してください。</p>
+                <p><b>ポート番号</b>：Masonをログインさせたいサーバーのポートを入力してください、標準は25565です。</p>
+                <p><b>バージョン</b>：サーバーのMinecraftのバージョンを入れてください。</p>
+                <p><b>プレイヤー名</b>：あなたのプレイヤー名を入れてください。マルチで頭上に表示される名前です。Masonは入力したプレイヤー名のチャットにのみ応答します。1文字でも間違えると反応しないので注意してください。</p>
+                <p><b>今日の目標</b>：Minecraft内での目標を英語で記入してください(Get diamond, Defeat EnderDragonとか)。Masonが目標達成のために次にすることを教えてくれます。</p>
+                <p>入力が終わったら「ログイン！」を押しましょう。</p>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

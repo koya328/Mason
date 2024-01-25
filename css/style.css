@@ -1,0 +1,48 @@
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    height: 100px;
+    text-align: center;
+}
+
+.content {
+    background-color: #ffffff;
+}
+
+.content-form{
+    text-align: center;
+}
+
+.content-text{
+    margin-left: 10px;
+    width:auto;
+}
+
+.menu {
+    background-color: #e5e5e5;
+    width: 200px;
+}
+
+article {
+    display: flex;
+}
+
+li{
+    padding:10px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu_item {
+        text-align: center;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

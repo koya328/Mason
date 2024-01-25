@@ -1,0 +1,24 @@
+Classify the received chat into one of three categories: 'Request Next Task', 'Order' or 'Chat'.
+
+chat: please give me next task
+Request Next Task
+
+chat: Come here.
+Order
+
+chat: What am I to do next?
+Request Next Task
+
+chat: next task.
+Request Next Task
+
+chat: Cut the tree.
+Order
+
+chat: Craft a stone pickaxe.
+Order
+
+Other conversations, questions and "tell me"
+Chat
+
+chat: {chat}
