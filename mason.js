@@ -14,9 +14,6 @@ const infomation = require("./actions/infomation.js");
 const mineBlock = require("./actions/mineBlock.js");
 const send_data = require("./actions/send_data.js");
 
-
-const AUTH = 'microsoft';
-
 const pyshell = new PythonShell('./interaction.py');
 const build_shell = new PythonShell('./build.py');
 

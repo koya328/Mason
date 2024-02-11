@@ -2,14 +2,14 @@ const mason = require('./mason');
 
 const HOST = "localhost";
 const PORT = "25565";
-const BOT_USERNAME = "hogehoge@outlook.jp";
-const PASSWORD = "pass123";
+const BOT_USERNAME = "Mason";
+const PASSWORD = null;
 const VERSION = "1.19.4";
-const PLAYER_NAME = "player";
+const PLAYER_NAME = "koya328";
 const PLAYER_GOAL = "Get diamond";
+const AUTH = 'offline';
 
-
-mason.startMason(HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, (error) => {
+mason.startMason(HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, AUTH, (error) => {
   if (error) {
       console.log(error)
   }

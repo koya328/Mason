@@ -23,6 +23,7 @@ def action(data):
     Nearby blocks: {data['blocks']} (10-block radius.)
     Nearby entities: {data['entities']} (32-block radius.)
     Position: {data['pos']}
+    Collected Item: {data['collected']} (This is an item I have picked up once. Not necessarily currently in my possession.)
     Chests: {data['chest']} (You can ask me to deposit or take items from these chests. There also might be some unknown chest, you should ask me to open and check items inside the unknown chest.)
 
     Perform the task by function calling or answer "None" if you cannot.
