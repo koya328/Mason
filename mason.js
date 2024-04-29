@@ -17,7 +17,7 @@ const send_data = require("./actions/send_data.js");
 const pyshell = new PythonShell('./interaction.py');
 const build_shell = new PythonShell('./build.py');
 
-module.exports.startMason = (HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, callback) => {
+module.exports.startMason = (HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, AUTH, callback) => {
   try {
       const bot = mineflayer.createBot({
         host: HOST,
@@ -57,7 +57,9 @@ module.exports.startMason = (HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER
       });
       
       bot.once('login', () => {
+        callback("login")
         my_bot_member_init(bot);
+        send_data.player_collect(bot,PLAYER_NAME);
         bot.chat(`Hi ${PLAYER_NAME}!`);
         bot.chat(`/mvtp ${PLAYER_NAME}`);
         bot.chat(`/tp ${PLAYER_NAME}`);
@@ -94,6 +96,7 @@ module.exports.startMason = (HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER
       bot.on('chat', (username, message) => {
         if (username === bot.username || username !== PLAYER_NAME)
           return;
+        callback(message)
         
         split_msg = message.split(" ");
         
@@ -134,8 +137,10 @@ module.exports.startMason = (HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER
           return;
         }
         
+
         const json_data = send_data.make_jsondata(bot, PLAYER_NAME, PLAYER_GOAL, message);
         const json_string = JSON.stringify(json_data, null, 0);
+        callback(json_string)
         pyshell.send(json_string);
       });
       

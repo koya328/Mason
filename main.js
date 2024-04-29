@@ -9,9 +9,9 @@ const PLAYER_NAME = "koya328";
 const PLAYER_GOAL = "Get diamond";
 const AUTH = 'offline';
 
-mason.startMason(HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, AUTH, (error) => {
-  if (error) {
-      console.log(error)
+mason.startMason(HOST, PORT, BOT_USERNAME, PASSWORD, VERSION, PLAYER_NAME, PLAYER_GOAL, AUTH, (log) => {
+  if (log) {
+      console.log(log)
   }
 });
 

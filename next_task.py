@@ -24,6 +24,7 @@ prompt = ChatPromptTemplate.from_template(template_text, partial_variables={
                                           "format_instructions": output_parser.get_format_instructions()})
 chain = prompt | model | output_parser
 
+before_task = []
 def next_task(data):
     result = chain.invoke({
         "goals": data['goals'],
@@ -35,7 +36,9 @@ def next_task(data):
         "pos": data['pos'],
         "equip": data['equip'],
         "collected": data['collected'],
-        "chest": data['chest']
+        "chest": data['chest'],
+        "before_task": before_task
     })
+    before_task.append(result.task)
     return result.reasoning, result.task
     
