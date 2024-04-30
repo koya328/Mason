@@ -13,9 +13,15 @@ npm install mineflayer-pathfinder
 npm install mineflayer-collectblock
 npm install python-shell
 
-# Node.jsパッケージのインストール
+# pythonパッケージのインストール
 pip install openai
 pip install langchain
+pip install -U langchain-community
+pip install -U langchain-openai
+pip install unstructured
+pip install markdown
+pip install tiktoken
+pip install faiss-cpu
 ```
 
 ## 使用方法

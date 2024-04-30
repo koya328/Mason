@@ -1,9 +1,9 @@
 from operator import itemgetter
 
-from langchain.chat_models import ChatOpenAI
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
 from langchain.prompts import ChatPromptTemplate
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
@@ -12,7 +12,7 @@ from my_util import load_txt
 api_key = load_txt("api_key.txt")
 embedding=OpenAIEmbeddings(openai_api_key=api_key)
 
-vectorstore = FAISS.load_local("./vectorstore", embedding)
+vectorstore = FAISS.load_local("./vectorstore", embedding, allow_dangerous_deserialization=True)
 retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 
 template = """You are Minecraft Assistant.
