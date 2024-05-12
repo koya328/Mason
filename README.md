@@ -1,7 +1,9 @@
 # Mason
 Mason (Minecraft AI Support ― Objectives and Novelty)は、Minecraftの中で次のタスクを提示したり構造物を自動生成することができるbotです。
 
+デモ動画
 https://github.com/koya328/Mason/assets/120627306/a45354ad-dfea-49b7-95b2-072dd3e45577
+
 https://github.com/koya328/Mason/assets/120627306/96928aa2-f3e5-4d10-8fb5-4af5c6ad6014
 
 ## 導入方法
